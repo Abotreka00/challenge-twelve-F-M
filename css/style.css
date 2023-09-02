@@ -84,7 +84,7 @@ ul {
 
 .grid .item1 {
     grid-column: 1 / span 2;
-    background-image: url(/img/bg-pattern-quotation.svg);
+    background-image: url(img/bg-pattern-quotation.svg);
     background-repeat: no-repeat;
     background-position: 85% 1%;
 }
