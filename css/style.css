@@ -1,0 +1,169 @@
+/* start global */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+:root {
+    --color-One: hsl(210, 46%, 95%);
+    --color-Two: hsl(0, 0%, 81%);
+    --color-Three: hsl(0, 0%, 100%);
+    --color-Four: hsl(219, 29%, 14%);
+    --color-Five: hsl(217, 19%, 35%);
+    --color-Six:hsl(263, 55%, 52%) ;
+}
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    background-color: var(--color-One);
+}
+p {
+    font-size: 16px ;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+    width: 750px;
+    }
+}
+  /* Medium */
+@media (min-width: 992px) {
+    .container {
+    width: 970px;
+    }
+}
+  /* Large */
+@media (min-width: 1200px) {
+    .container {
+    width: 1170px;
+    }
+}
+/* end global */
+/* start grid */
+.grid {
+    width: 80%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: repeat(4 , auto); /* auto auto auto atuo */
+    position: absolute;
+    gap: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    background-color: transparent;
+}
+.grid .item {
+    border-radius: inherit;
+    padding: 20px;
+}
+
+.grid .item1 {
+    grid-column: 1 / span 2;
+}
+.grid .item5 {
+    grid-column: 2 / span 2;
+}
+.grid .item3 {
+    grid-row: span 2;
+}
+.grid .item .file img{
+    width: 25px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.grid .item .file {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.grid .item .file .info p{
+    color: white;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.grid .item3 .file .info p{
+    color: rgb(0, 0, 0);
+}
+.grid .item4 .file .info p{
+    color: rgb(0, 0, 0);
+}
+.grid .item .file .info span{
+    color: white;
+    font-weight: normal;
+    opacity: .5;
+}
+.grid .item3 .file .info span{
+    color: rgb(0, 0, 0);
+}
+.grid .item4 .file .info span{
+    color: rgb(0, 0, 0);
+}
+.grid .item h2{
+    margin-bottom: 20px;
+    color: white;
+}
+.grid .item3 h2{
+    color: rgb(0, 0, 0);
+}
+.grid .item4 h2{
+    color: rgb(0, 0, 0);
+}
+.grid .item p.p{
+    color: white;
+    opacity: .5;
+}
+.grid .item3 p.p{
+    color: rgb(0, 0, 0);
+}
+.grid .item4 p.p{
+    color: rgb(0, 0, 0);
+}
+/* end grid */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1;
+        position: absolute;
+        column-gap: 0;
+    }
+    .grid .item1 {
+        grid-column: 1 / span 1;
+    }
+    .grid .item2 {
+        grid-column: 1 / span 1;
+    }
+    .grid .item3 {
+        grid-column: 1 / span 1;
+    }
+    .grid .item4 {
+        grid-column: 1 / span 1;
+    }
+    .grid .item5 {
+        grid-column: 1 / span 1;
+    }
+}
